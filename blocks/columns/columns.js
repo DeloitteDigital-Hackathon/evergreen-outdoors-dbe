@@ -13,8 +13,19 @@ export default function decorate(block) {
           picWrapper.classList.add('columns-img-col');
         }
       }
-      const buttons = col.querySelectorAll('.button');
-      console.log(buttons);
+      const buttons = col.querySelectorAll(".button");
+      bottons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const parentElement = button.parentElement.parentElement;
+          const productName =
+            parentElement.querySelector("p:first-child").textContent;
+          const productPrice =
+            parentElement.querySelector("p:nth-child(2").textContent;
+
+          document.product.name = productName;
+          document.product.price = productPrice;
+        });
+      });
     });
   });
 }
