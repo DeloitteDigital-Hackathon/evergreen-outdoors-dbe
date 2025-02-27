@@ -13,6 +13,8 @@ export default function decorate(block) {
           picWrapper.classList.add('columns-img-col');
         }
       }
+      const buttons = col.querySelectorAll('.button');
+      console.log(buttons);
     });
   });
 }
