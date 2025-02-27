@@ -5,27 +5,35 @@ export default function decorate(block) {
   // setup image columns
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
-      const pic = col.querySelector('picture');
+      const pic = col.querySelector("picture");
       if (pic) {
-        const picWrapper = pic.closest('div');
+        const picWrapper = pic.closest("div");
         if (picWrapper && picWrapper.children.length === 1) {
           // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
+          picWrapper.classList.add("columns-img-col");
         }
       }
+
       const buttons = col.querySelectorAll(".button");
       buttons.forEach((button) => {
         button.addEventListener("click", (event) => {
+          event.preventDefault();
           const parentElement = button.parentElement.parentElement;
           const productName =
             parentElement.querySelector("p:first-child").textContent;
           const productPrice =
             parentElement.querySelector("p:nth-child(2").textContent;
 
-          document.product = {
+          const product = {
             name: productName,
             price: productPrice,
           };
+
+          document.product = product;
+
+          const addToBag = localStorage.getItem("addToBag") ?? [];
+
+          localStorage.setItem("addToBag", [...addToBag, product]);
         });
       });
     });
