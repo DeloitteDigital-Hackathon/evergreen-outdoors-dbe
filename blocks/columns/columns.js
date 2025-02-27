@@ -22,8 +22,10 @@ export default function decorate(block) {
           const productPrice =
             parentElement.querySelector("p:nth-child(2").textContent;
 
-          document.product.name = productName;
-          document.product.price = productPrice;
+          document.product = {
+            name: productName,
+            price: productPrice,
+          };
         });
       });
     });
