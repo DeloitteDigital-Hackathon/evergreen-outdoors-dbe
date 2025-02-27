@@ -1,1 +1,33 @@
-
+{
+    "info": {
+      "name": "AEM Sidekick",
+      "version": "6.42.0",
+      "date": "Thu, 27 Feb 2025 15:01:06 GMT"
+    },
+    "projects": [
+      {
+        "giturl": "https://github.com/DeloitteDigital-Hackathon/evergreen-outdoors-dbe/tree/main",
+        "id": "DeloitteDigital-Hackathon/evergreen-outdoors-dbe/main",
+        "mountpoints": [
+          "https://drive.google.com/drive/folders/1GV3xgdW2UdaQ7p45MFsyWuP-rlbqgFL1"
+        ],
+        "owner": "DeloitteDigital-Hackathon",
+        "ref": "main",
+        "repo": "evergreen-outdoors-dbe"
+      }
+    ],
+    "plugins": [
+      {
+        "id": "asset-library",
+        "title": "My Assets",
+        "environments": [
+        "edit"
+        ],
+        "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html?rail=false",
+        "isPalette": true,
+        "includePaths": [ "**.docx**" ],
+        "passConfig": true,
+        "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
+      }
+    ]
+  }
