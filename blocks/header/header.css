@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--nav-background-color);
+  color: var(--secondary-text-color);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -68,7 +69,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: var(--nav-background-color);
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -138,14 +139,14 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 68px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 68px;
   height: auto;
 }
 
@@ -265,4 +266,14 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools > div{
+  display: flex;
+    gap: 16px;  
+}
+
+header nav .nav-tools img {
+    width: 50px;
+    height: auto;
 }
