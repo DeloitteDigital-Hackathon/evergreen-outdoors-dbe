@@ -14,7 +14,7 @@ export default function decorate(block) {
         }
       }
       const buttons = col.querySelectorAll(".button");
-      bottons.forEach((button) => {
+      buttons.forEach((button) => {
         button.addEventListener("click", (event) => {
           const parentElement = button.parentElement.parentElement;
           const productName =
